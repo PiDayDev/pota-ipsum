@@ -12,4 +12,4 @@ export const UNITS = [
   UNIT_PARAGRAPHS,
   UNIT_PARAGRAPH,
 ];
-export type LoremUnit = "words" | "word" | "sentences" | "sentence" | "paragraphs" | "paragraph";
+export type PotaUnit = "words" | "word" | "sentences" | "sentence" | "paragraphs" | "paragraph";

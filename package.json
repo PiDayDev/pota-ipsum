@@ -1,23 +1,23 @@
 {
-  "name": "lorem-ipsum",
+  "name": "pota-ipsum",
   "version": "2.0.8",
-  "description": "Generates passages of lorem ipsum text suitable for use as placeholder copy in web pages, graphics, and more. Works in the browser, NodeJS, and React Native.",
+  "description": "Generates passages of pota ipsum text suitable for use as placeholder copy in web pages, graphics, and more. Works in the browser, NodeJS, and React Native.",
   "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/knicklabs/node-lorem-ipsum.git"
+    "url": "https://github.com/PiDayDev/pota-ipsum.git"
   },
   "main": "dist/index",
   "bin": {
-    "lorem-ipsum": "dist/bin/lorem-ipsum.bin.js"
+    "pota-ipsum": "dist/bin/pota-ipsum.bin.js"
   },
   "types": "types/src/index.d.ts",
   "scripts": {
     "type-check": "tsc --noEmit",
     "build:types": "rm -rf types && tsc --emitDeclarationOnly",
     "build:js": "rm -rf dist && babel src --ignore '**/*.test.ts' --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
-    "build:exec": "gsed -i '1i #!/usr/bin/env node' dist/bin/lorem-ipsum.bin.js",
+    "build:exec": "gsed -i '1i #!/usr/bin/env node' dist/bin/pota-ipsum.bin.js",
     "build": "npm run build:types && npm run build:js && npm run build:exec",
     "lint:check": "tslint -c tslint.json src/**/*.ts",
     "test": "jest --coverage",
@@ -27,7 +27,7 @@
     "coverage:dry": "nyc report --temp-directory=coverage --reporter=text-lcov"
   },
   "keywords": [
-    "lorem",
+    "pota",
     "ipsum",
     "placeholder",
     "text",

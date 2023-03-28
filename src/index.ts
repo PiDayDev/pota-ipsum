@@ -1,6 +1,6 @@
-import { LoremFormat, FORMAT_PLAIN } from "./constants/formats";
+import { PotaFormat, FORMAT_PLAIN } from "./constants/formats";
 import {
-  LoremUnit,
+  PotaUnit,
   UNIT_PARAGRAPH,
   UNIT_PARAGRAPHS,
   UNIT_SENTENCES,
@@ -10,22 +10,22 @@ import {
 } from "./constants/units";
 import { WORDS } from "./constants/words";
 import { IPrng } from "./lib/generator";
-import LoremIpsum from "./lib/LoremIpsum";
+import PotaIpsum from "./lib/PotaIpsum";
 
-export interface ILoremIpsumParams {
+export interface IPotaIpsumParams {
   count?: number;
-  format?: LoremFormat;
+  format?: PotaFormat;
   paragraphLowerBound?: number;
   paragraphUpperBound?: number;
   random?: IPrng;
   sentenceLowerBound?: number;
   sentenceUpperBound?: number;
-  units?: LoremUnit;
+  units?: PotaUnit;
   words?: string[];
   suffix?: string;
 }
 
-const loremIpsum = ({
+const potaIpsum = ({
   count = 1,
   format = FORMAT_PLAIN,
   paragraphLowerBound = 3,
@@ -36,7 +36,7 @@ const loremIpsum = ({
   units = UNIT_SENTENCES,
   words = WORDS,
   suffix = "",
-}: ILoremIpsumParams = {}): string => {
+}: IPotaIpsumParams = {}): string => {
   const options = {
     random,
     sentencesPerParagraph: {
@@ -50,21 +50,21 @@ const loremIpsum = ({
     },
   };
 
-  const lorem: LoremIpsum = new LoremIpsum(options, format, suffix);
+  const pota: PotaIpsum = new PotaIpsum(options, format, suffix);
 
   switch (units) {
     case UNIT_PARAGRAPHS:
     case UNIT_PARAGRAPH:
-      return lorem.generateParagraphs(count);
+      return pota.generateParagraphs(count);
     case UNIT_SENTENCES:
     case UNIT_SENTENCE:
-      return lorem.generateSentences(count);
+      return pota.generateSentences(count);
     case UNIT_WORDS:
     case UNIT_WORD:
-      return lorem.generateWords(count);
+      return pota.generateWords(count);
     default:
       return "";
   }
 };
 
-export { loremIpsum, LoremIpsum };
+export { potaIpsum, PotaIpsum };
