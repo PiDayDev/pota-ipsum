@@ -1,5 +1,5 @@
-import { WORDS } from "../constants/words";
-import { capitalize, makeArrayOfLength } from "../util";
+import { WORDS } from '../constants/words';
+import { capitalize, makeArrayOfLength } from '../util';
 
 export interface IBounds {
   min: number;
@@ -65,9 +65,7 @@ class Generator {
     const { min, max } = this.wordsPerSentence;
     const length = num || this.generateRandomInteger(min, max);
     return makeArrayOfLength(length)
-      .reduce((accumulator: string, index: number): string => {
-        return `${this.pluckRandomWord()} ${accumulator}`;
-      }, "")
+      .reduce((accumulator: string): string => `${this.pluckRandomWord()} ${accumulator}`, "")
       .trim();
   }
 
@@ -79,9 +77,7 @@ class Generator {
     const { min, max } = this.sentencesPerParagraph;
     const length = num || this.generateRandomInteger(min, max);
     return makeArrayOfLength(length)
-      .reduce((accumulator: string, index: number): string => {
-        return `${this.generateRandomSentence()} ${accumulator}`;
-      }, "")
+      .reduce((accumulator: string): string => `${this.generateRandomSentence()} ${accumulator}`, "")
       .trim();
   }
 
@@ -89,7 +85,12 @@ class Generator {
     const min = 0;
     const max = this.words.length - 1;
     const index = this.generateRandomInteger(min, max);
-    return this.words[index];
+    const word = this.words[index];
+    if (word.indexOf(' ') >= 0) {
+      const tokens = word.split(" ");
+      return tokens[this.generateRandomInteger(0, tokens.length)];
+    }
+    return word;
   }
 }
 
