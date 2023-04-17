@@ -88,7 +88,7 @@ class Generator {
     const word = this.words[index];
     if (word.indexOf(' ') >= 0) {
       const tokens = word.split(" ");
-      return tokens[this.generateRandomInteger(0, tokens.length)];
+      return tokens[this.generateRandomInteger(0, tokens.length - 1)];
     }
     return word;
   }
