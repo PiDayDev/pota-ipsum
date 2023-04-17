@@ -1,6 +1,6 @@
 {
   "name": "pota-ipsum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates passages of pota ipsum text suitable for use as placeholder copy in web pages, graphics, and more. Works in the browser, NodeJS, and React Native.",
   "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
   "license": "ISC",
