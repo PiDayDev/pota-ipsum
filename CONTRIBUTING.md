@@ -1,11 +1,11 @@
 # Contributing
 
-Don't. 
+Miga far.
 
-This is a personal joke project, I'm not accepting pull requests.
+Stò l'è un prugètt persunàl de barzelèta, nò accettì richieste dë pull.
 
-Thanks for your understanding.
+Gràssie për la tùa comprensión.
 
 ## But...
 
-Ok, if you have a nice idea, consider contributing to [the original project](https://github.com/knicklabs/lorem-ipsum.js).
+Va ben, se te vën in ment un bela idea, pënzèr de contrîbüìr al [prugètt uriginal](https://github.com/knicklabs/lorem-ipsum.js).
