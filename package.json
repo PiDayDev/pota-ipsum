@@ -1,6 +1,6 @@
 {
   "name": "pota-ipsum",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Gnera paràgraf dë test Pota Ipsum ch' l'è bon p'r èser minga da briv. Funsiuna in stron, NodeJS e React Native. Va ben p'r i paig web, grafega e ansé.",
   "author": "Nickolas Kenyeres <nkenyeres@gmail.com> (http://knicklabs.github.com)",
   "contributors": [
@@ -36,7 +36,14 @@
     "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "coverage:dry": "nyc report --temp-directory=coverage --reporter=text-lcov"
   },
-  "keywords": ["pota", "ipsum", "placeholder", "text", "dummy", "filler"],
+  "keywords": [
+    "pota",
+    "ipsum",
+    "placeholder",
+    "text",
+    "dummy",
+    "filler"
+  ],
   "engines": {
     "node": ">= 8.x",
     "npm": ">= 5.x"
@@ -78,6 +85,13 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
