@@ -4,7 +4,7 @@ El lorem ipsum no t'ad fradà e ti te servì frasi pì comphexe p'r testà la t�
 
 Fork del [lorem/ipsum.js](https://github.com/knicklabs/lorem-ipsum.js).
 
-## Uso rapid
+## Dèsdet fò docà
 
 ```shell
 npm install 
@@ -12,4 +12,8 @@ npm run build
 node dist/bin/pota-ipsum.bin.js 2 paragraphs
 ```
 
-Varda la documentasiùn orìginàl p'r pì detagi.
+Arda la documentasiùn orìginàl se te ülèt saì ergót d'óter.
+
+## Ülèt proàl sübet?
+
+Alura [schisa chè](https://pidaydev.github.io/pota-ipsum-web/) col tò ratì.
